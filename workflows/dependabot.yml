@@ -3,7 +3,7 @@ registries:
   public-nuget-feed:
     type: nuget-feed
     url: https://api.nuget.org/v3/index.json
-  # other private feed .....
+  # other private feeds .....
 
 updates:
   # Maintain dependencies for Nuget packages
