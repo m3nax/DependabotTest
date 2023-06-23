@@ -1,0 +1,18 @@
+version: 2
+registries:
+  public-nuget-feed:
+    type: nuget-feed
+    url: https://api.nuget.org/v3/index.json
+  # other private feed .....
+
+updates:
+  # Maintain dependencies for Nuget packages
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    target-branch: "main"
+    open-pull-requests-limit: 10
+    registries:
+      - "public-nuget-feed"
